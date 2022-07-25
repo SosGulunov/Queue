@@ -16,14 +16,14 @@ public:
 
 	T pop() {
 		if (count == 0) throw;
-		T temp = this->mas[count];
-		this->mas[count] = 0;
+		T temp = this->mas[count-1];
+		this->mas[count-1] = 0;
 		this->count--;
 		return temp;
 	}
 
 	void operator>>(T& x) {
-		x = this->mas[count-1];
+		x = this->pop();
 	}
 
 	Queue& operator<<(T m) {

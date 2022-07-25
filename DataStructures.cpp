@@ -9,8 +9,11 @@ int main()
 	q << 2;
 	q << 3;
 	int x;
+	int y;
 	q >> x;
-	cout << x;
+	q >> y;
+
+	cout << x << " " << y;
 }
 
 
