@@ -4,11 +4,13 @@ using namespace std;
 
 int main()
 {
-	Queue<int> q(5);
-	q >> 1;
-	q >> 1;
-	q >> 1;
-	q >> 1;
+	Queue<int> q(15);
+	q << 1;
+	q << 2;
+	q << 3;
+	int x;
+	q >> x;
+	cout << x;
 }
 
 

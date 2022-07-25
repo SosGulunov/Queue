@@ -17,18 +17,30 @@ public:
 	T pop() {
 		if (count == 0) throw;
 		T temp = this->mas[count];
-		this->mas[count] = nullptr;
+		this->mas[count] = 0;
 		this->count--;
 		return temp;
 	}
 
-	void operator>>(T m) {
-		add(m);
+	void operator>>(T& x) {
+		x = this->mas[count-1];
+	}
+
+	Queue& operator<<(T m) {
+		this->add(m);
+		return *this;
 	}
 
 	/*T operator<<() {
 		return pop();
 	}*/
+
+	void show() {
+		for (size_t i = 0; i < count; i++)
+		{
+			cout << mas[i] << " ";
+		}
+	}
 
 	~Queue() { delete[]mas; };
 
